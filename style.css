@@ -22,7 +22,7 @@ body{
     border-radius: 50%;
     font-size: 100px;
     border: none;
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(219, 219, 219);
 }
 .clicked{
     background-color: #c40000;
