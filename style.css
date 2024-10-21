@@ -1,48 +1,49 @@
 @charset "utf-8";
-* {
-    margin: 0;
+*{
+    margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
+    user-select: none;
 }
+button{
+    border: none;
 
-html, body {
+}
+body{
+    background-color: black;
+}
+.wrap{
+    width: 100%;
     height: 100%;
 }
-
-body {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.wrap {
-    text-align: center;
-}
-
-.time {
-    position: fixed; /* 화면에 고정 */
-    top: 10px; /* 상단에서 10px */
-    left: 10px; /* 왼쪽에서 10px */
-    color: green;
-    font-size: 100px;
-}
-
-.button {
+.button{
     width: 500px;
     height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
     border-radius: 50%;
     font-size: 100px;
     background-color: rgb(219, 219, 219);
-    display: inline-block;
-    border: none;
 }
-
-.clicked {
+.clicked{
     background-color: #c40000;
 }
-
-.hide {
+.time{
+    color: green;
+    font-size: 100px;
+}
+.hide{
     display: none;
+}
+.reset{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgb(59, 59, 59);
 }
