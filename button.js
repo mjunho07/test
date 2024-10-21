@@ -22,20 +22,21 @@ function onReset(){
     if(resetCheck == "reset"){
         minute = 60;
         second = 0;
-        time.innerText = `${minute}:${second}`;
+        time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
     }
 }
 function startTimer(){
     if(second > 0){
         second--;
-        time.innerText = `${minute}:${second}`;
+        time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
     }
     else if(minute > 0){
         minute--;
         second = 59;
-        time.innerText = `${minute}:${second}`;
+        time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
     }else{
-        time.innerText = `${minute}:${second}`;
+        time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
+        clearInterval(interval);
     }
 }
 button.addEventListener("click",handleTimer);
