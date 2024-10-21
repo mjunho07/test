@@ -1,6 +1,8 @@
 const button = document.querySelector('.button');
 const reset = document.querySelector('.reset');
 const time = document.querySelector('.time');
+const time2 = document.querySelector('.time2');
+
 let interval;
 let minute = 60;
 let second = 0;
@@ -18,11 +20,13 @@ function handleTimer(){
     }
 }
 function onReset(){
-    const resetCheck = prompt("real? typing 'reset'")
+    const resetCheck = prompt("real? typing 'reset'");
     if(resetCheck == "reset"){
         minute = 60;
         second = 0;
         time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
+        time2.classList.add('hide');
+        time.classList.remove('hide');
     }
 }
 function startTimer(){
@@ -37,6 +41,8 @@ function startTimer(){
     }else{
         time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         clearInterval(interval);
+        time2.classList.remove('hide');
+        time.classList.add('hide');
     }
 }
 button.addEventListener("click",handleTimer);
