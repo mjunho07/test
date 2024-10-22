@@ -45,11 +45,11 @@ function startTimer(){
         second = 59;
         time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
     }else{
-        time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         clearInterval(interval);
         time2.classList.remove('hide');
         time.classList.add('hide');
         minute = 5;
+        time2.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         interval = setInterval(startTimer2,OENSECOND);
         count++;
         countClass.innerText = count;
@@ -65,12 +65,11 @@ function startTimer2(){
         second = 59;
         time2.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
     }else{
-        time2.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         clearInterval(interval);
         time.classList.remove('hide');
         time2.classList.add('hide');
         minute = 60
-        time2.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
+        time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         interval = setInterval(startTimer,OENSECOND);
     }
 }
