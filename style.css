@@ -66,3 +66,9 @@ body{
     color: rgb(0, 82, 103);
     font-weight: bold;
 }
+.count{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: greenyellow;
+}

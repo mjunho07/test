@@ -2,6 +2,8 @@ const button = document.querySelector('.button');
 const reset = document.querySelector('.reset');
 const time = document.querySelector('.time');
 const time2 = document.querySelector('.time2');
+const countClass = document.querySelector('.count');
+let count = 1;
 
 let interval;
 let minute = 60;
@@ -49,6 +51,8 @@ function startTimer(){
         time.classList.add('hide');
         minute = 5;
         interval = setInterval(startTimer2,OENSECOND);
+        count++;
+        countClass.innerText = `count:${count}`;
     }
 }
 function startTimer2(){
