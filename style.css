@@ -32,9 +32,11 @@ body{
 }
 .time{
     position: absolute;
-    color: green;
+    color: rgb(0, 175, 0);
     font-size: 100px;
     z-index: 1;
+    top: -30px;
+    left: 0px;
 }
 .hide{
     display: none;
@@ -65,4 +67,11 @@ body{
     font-size: 150px;
     color: rgb(0, 82, 103);
     font-weight: bold;
+}
+.count{
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    color: rgb(0, 135, 0);
+    font-size: 60px;
 }
