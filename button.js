@@ -3,7 +3,7 @@ const reset = document.querySelector('.reset');
 const time = document.querySelector('.time');
 const time2 = document.querySelector('.time2');
 const countClass = document.querySelector('.count');
-let count = 1;
+let count = 0;
 
 let interval;
 let minute = 60;
