@@ -70,8 +70,8 @@ body{
 }
 .count{
     position: absolute;
-    top: 70px;
-    left: 0px;
-    color: rgb(0, 135, 0);
+    top: -15px;
+    right: 0px;
+    color: rgb(116, 148, 0);
     font-size: 60px;
 }
