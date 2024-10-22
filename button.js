@@ -52,7 +52,7 @@ function startTimer(){
         minute = 5;
         interval = setInterval(startTimer2,OENSECOND);
         count++;
-        countClass.innerText = `count:${count}`;
+        countClass.innerText = count;
     }
 }
 function startTimer2(){
