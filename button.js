@@ -6,8 +6,8 @@ const countClass = document.querySelector('.count');
 let count = 0;
 
 let interval;
-let minute = 60;
-let second = 0;
+let minute = 0;
+let second = 5;
 
 const OENSECOND = 1000; 
 
@@ -26,8 +26,8 @@ function handleTimer(){
 function onReset(){
     const resetCheck = prompt("real? typing 'reset'");
     if(resetCheck == "reset"){
-        minute = 60;
-        second = 0;
+        minute = 0;
+        second = 5;
         time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         time2.classList.add('hide');
         time.classList.remove('hide');
@@ -48,7 +48,7 @@ function startTimer(){
         clearInterval(interval);
         time2.classList.remove('hide');
         time.classList.add('hide');
-        minute = 5;
+        second = 5;
         time2.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         interval = setInterval(startTimer2,OENSECOND);
         count++;
@@ -68,7 +68,7 @@ function startTimer2(){
         clearInterval(interval);
         time.classList.remove('hide');
         time2.classList.add('hide');
-        minute = 60
+        second = 5;
         time.innerText = `${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}`;
         interval = setInterval(startTimer,OENSECOND);
     }
